@@ -6,6 +6,28 @@
 //
 
 import Foundation
+import IOKit
 
-print("Hello, World!")
+class App {
+    private let usbReader: UsbService
+    
+    init() {
+        self.usbReader = UsbService()
+    }
+    
+    deinit {
+        usbReader.disconnect()
+    }
+    
+    public func run() {
+        do {
+            let devices = try usbReader.listDevices()
+            print(devices)
+        } catch {
+            print("Error: \(error)")
+        }
+    }
+}
 
+let app = App()
+app.run()
