@@ -8,5 +8,5 @@
 import Foundation
 
 @objc(UsbProtocol) public protocol UsbProtocol {
-    func listDevices() throws -> [String]
+    func listDevices() async throws -> [String]
 }

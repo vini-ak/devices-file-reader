@@ -8,6 +8,6 @@
 import Foundation
 
 @objc(UsbXPCProtocol) public protocol UsbXPCProtocol {
-    func readUsbDevices() throws -> [String]
-    func readUsbDevice(_ devicePath: String) throws -> [String: Any]
+    func readUsbDevices(completion: @escaping ([String]) -> Void)
+    func readUsbDevice(_ device: String, completion: @escaping (String?) -> Void)
 }

@@ -6,67 +6,120 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FFBE0E782E01FE6900FB0F60 /* UsbXPCService.xpc in Copy Files (1 item) */ = {isa = PBXBuildFile; fileRef = FFBE0DB72E01B16F00FB0F60 /* UsbXPCService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FFBE0E5C2E01FE2C00FB0F60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF626F452E005C13007CA775 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFBE0E4D2E01FE2B00FB0F60;
+			remoteInfo = DeviceReader;
+		};
+		FFBE0E662E01FE2C00FB0F60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF626F452E005C13007CA775 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FFBE0E4D2E01FE2B00FB0F60;
+			remoteInfo = DeviceReader;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		FF626F4B2E005C13007CA775 /* CopyFiles */ = {
+		FFBE0E772E01FE5900FB0F60 /* Copy Files (1 item) */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
 			files = (
+				FFBE0E782E01FE6900FB0F60 /* UsbXPCService.xpc in Copy Files (1 item) */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "Copy Files (1 item)";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FF626F4D2E005C13007CA775 /* devices-file-reader */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "devices-file-reader"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFBE0D952E00A78800FB0F60 /* UsbXPCService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = UsbXPCService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFBE0DB72E01B16F00FB0F60 /* UsbXPCService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = UsbXPCService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFBE0E4E2E01FE2B00FB0F60 /* DeviceReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFBE0E5B2E01FE2C00FB0F60 /* DeviceReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFBE0E652E01FE2C00FB0F60 /* DeviceReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeviceReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		FFBE0D9F2E00A78800FB0F60 /* Exceptions for "UsbXPCService" folder in "UsbXPCService" target */ = {
+		FFBE0E002E01BEB300FB0F60 /* Exceptions for "UsbXPCService" folder in "UsbXPCService" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				main.swift,
+				UsbProtocol.swift,
+				UsbXPCDelegate.swift,
+				UsbXPCProtocol.swift,
+				UsbXPCService.swift,
 			);
-			target = FFBE0D942E00A78800FB0F60 /* UsbXPCService */;
+			target = FFBE0DB62E01B16F00FB0F60 /* UsbXPCService */;
 		};
-		FFBE0DA32E00A87700FB0F60 /* Exceptions for "UsbXPCService" folder in "devices-file-reader" target */ = {
+		FFBE0E802E01FF3100FB0F60 /* Exceptions for "UsbXPCService" folder in "DeviceReader" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				UsbProtocol.swift,
 				UsbXPCProtocol.swift,
 			);
-			target = FF626F4C2E005C13007CA775 /* devices-file-reader */;
+			target = FFBE0E4D2E01FE2B00FB0F60 /* DeviceReader */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		FF626F4F2E005C13007CA775 /* devices-file-reader */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "devices-file-reader";
-			sourceTree = "<group>";
-		};
 		FFBE0D962E00A78800FB0F60 /* UsbXPCService */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				FFBE0DA32E00A87700FB0F60 /* Exceptions for "UsbXPCService" folder in "devices-file-reader" target */,
-				FFBE0D9F2E00A78800FB0F60 /* Exceptions for "UsbXPCService" folder in "UsbXPCService" target */,
+				FFBE0E002E01BEB300FB0F60 /* Exceptions for "UsbXPCService" folder in "UsbXPCService" target */,
+				FFBE0E802E01FF3100FB0F60 /* Exceptions for "UsbXPCService" folder in "DeviceReader" target */,
 			);
 			path = UsbXPCService;
+			sourceTree = "<group>";
+		};
+		FFBE0E4F2E01FE2B00FB0F60 /* DeviceReader */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DeviceReader;
+			sourceTree = "<group>";
+		};
+		FFBE0E5E2E01FE2C00FB0F60 /* DeviceReaderTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DeviceReaderTests;
+			sourceTree = "<group>";
+		};
+		FFBE0E682E01FE2C00FB0F60 /* DeviceReaderUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DeviceReaderUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FF626F4A2E005C13007CA775 /* Frameworks */ = {
+		FFBE0DB42E01B16F00FB0F60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFBE0D922E00A78800FB0F60 /* Frameworks */ = {
+		FFBE0E4B2E01FE2B00FB0F60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFBE0E582E01FE2C00FB0F60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFBE0E622E01FE2C00FB0F60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -79,8 +132,10 @@
 		FF626F442E005C13007CA775 = {
 			isa = PBXGroup;
 			children = (
-				FF626F4F2E005C13007CA775 /* devices-file-reader */,
 				FFBE0D962E00A78800FB0F60 /* UsbXPCService */,
+				FFBE0E4F2E01FE2B00FB0F60 /* DeviceReader */,
+				FFBE0E5E2E01FE2C00FB0F60 /* DeviceReaderTests */,
+				FFBE0E682E01FE2C00FB0F60 /* DeviceReaderUITests */,
 				FF626F4E2E005C13007CA775 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +143,10 @@
 		FF626F4E2E005C13007CA775 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF626F4D2E005C13007CA775 /* devices-file-reader */,
-				FFBE0D952E00A78800FB0F60 /* UsbXPCService.xpc */,
+				FFBE0DB72E01B16F00FB0F60 /* UsbXPCService.xpc */,
+				FFBE0E4E2E01FE2B00FB0F60 /* DeviceReader.app */,
+				FFBE0E5B2E01FE2C00FB0F60 /* DeviceReaderTests.xctest */,
+				FFBE0E652E01FE2C00FB0F60 /* DeviceReaderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,49 +154,93 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FF626F4C2E005C13007CA775 /* devices-file-reader */ = {
+		FFBE0DB62E01B16F00FB0F60 /* UsbXPCService */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF626F542E005C13007CA775 /* Build configuration list for PBXNativeTarget "devices-file-reader" */;
+			buildConfigurationList = FFBE0DC22E01B16F00FB0F60 /* Build configuration list for PBXNativeTarget "UsbXPCService" */;
 			buildPhases = (
-				FF626F492E005C13007CA775 /* Sources */,
-				FF626F4A2E005C13007CA775 /* Frameworks */,
-				FF626F4B2E005C13007CA775 /* CopyFiles */,
+				FFBE0DB32E01B16F00FB0F60 /* Sources */,
+				FFBE0DB42E01B16F00FB0F60 /* Frameworks */,
+				FFBE0DB52E01B16F00FB0F60 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				FF626F4F2E005C13007CA775 /* devices-file-reader */,
-			);
-			name = "devices-file-reader";
-			packageProductDependencies = (
-			);
-			productName = "devices-file-reader";
-			productReference = FF626F4D2E005C13007CA775 /* devices-file-reader */;
-			productType = "com.apple.product-type.tool";
-		};
-		FFBE0D942E00A78800FB0F60 /* UsbXPCService */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FFBE0DA02E00A78800FB0F60 /* Build configuration list for PBXNativeTarget "UsbXPCService" */;
-			buildPhases = (
-				FFBE0D912E00A78800FB0F60 /* Sources */,
-				FFBE0D922E00A78800FB0F60 /* Frameworks */,
-				FFBE0D932E00A78800FB0F60 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				FFBE0D962E00A78800FB0F60 /* UsbXPCService */,
 			);
 			name = UsbXPCService;
 			packageProductDependencies = (
 			);
 			productName = UsbXPCService;
-			productReference = FFBE0D952E00A78800FB0F60 /* UsbXPCService.xpc */;
+			productReference = FFBE0DB72E01B16F00FB0F60 /* UsbXPCService.xpc */;
 			productType = "com.apple.product-type.xpc-service";
+		};
+		FFBE0E4D2E01FE2B00FB0F60 /* DeviceReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFBE0E6D2E01FE2C00FB0F60 /* Build configuration list for PBXNativeTarget "DeviceReader" */;
+			buildPhases = (
+				FFBE0E4A2E01FE2B00FB0F60 /* Sources */,
+				FFBE0E4B2E01FE2B00FB0F60 /* Frameworks */,
+				FFBE0E4C2E01FE2B00FB0F60 /* Resources */,
+				FFBE0E772E01FE5900FB0F60 /* Copy Files (1 item) */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FFBE0E4F2E01FE2B00FB0F60 /* DeviceReader */,
+			);
+			name = DeviceReader;
+			packageProductDependencies = (
+			);
+			productName = DeviceReader;
+			productReference = FFBE0E4E2E01FE2B00FB0F60 /* DeviceReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FFBE0E5A2E01FE2C00FB0F60 /* DeviceReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFBE0E702E01FE2C00FB0F60 /* Build configuration list for PBXNativeTarget "DeviceReaderTests" */;
+			buildPhases = (
+				FFBE0E572E01FE2C00FB0F60 /* Sources */,
+				FFBE0E582E01FE2C00FB0F60 /* Frameworks */,
+				FFBE0E592E01FE2C00FB0F60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFBE0E5D2E01FE2C00FB0F60 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FFBE0E5E2E01FE2C00FB0F60 /* DeviceReaderTests */,
+			);
+			name = DeviceReaderTests;
+			packageProductDependencies = (
+			);
+			productName = DeviceReaderTests;
+			productReference = FFBE0E5B2E01FE2C00FB0F60 /* DeviceReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FFBE0E642E01FE2C00FB0F60 /* DeviceReaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFBE0E732E01FE2C00FB0F60 /* Build configuration list for PBXNativeTarget "DeviceReaderUITests" */;
+			buildPhases = (
+				FFBE0E612E01FE2C00FB0F60 /* Sources */,
+				FFBE0E622E01FE2C00FB0F60 /* Frameworks */,
+				FFBE0E632E01FE2C00FB0F60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FFBE0E672E01FE2C00FB0F60 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FFBE0E682E01FE2C00FB0F60 /* DeviceReaderUITests */,
+			);
+			name = DeviceReaderUITests;
+			packageProductDependencies = (
+			);
+			productName = DeviceReaderUITests;
+			productReference = FFBE0E652E01FE2C00FB0F60 /* DeviceReaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -151,11 +252,19 @@
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					FF626F4C2E005C13007CA775 = {
+					FFBE0DB62E01B16F00FB0F60 = {
 						CreatedOnToolsVersion = 16.4;
 					};
-					FFBE0D942E00A78800FB0F60 = {
+					FFBE0E4D2E01FE2B00FB0F60 = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					FFBE0E5A2E01FE2C00FB0F60 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = FFBE0E4D2E01FE2B00FB0F60;
+					};
+					FFBE0E642E01FE2C00FB0F60 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = FFBE0E4D2E01FE2B00FB0F60;
 					};
 				};
 			};
@@ -173,14 +282,37 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF626F4C2E005C13007CA775 /* devices-file-reader */,
-				FFBE0D942E00A78800FB0F60 /* UsbXPCService */,
+				FFBE0DB62E01B16F00FB0F60 /* UsbXPCService */,
+				FFBE0E4D2E01FE2B00FB0F60 /* DeviceReader */,
+				FFBE0E5A2E01FE2C00FB0F60 /* DeviceReaderTests */,
+				FFBE0E642E01FE2C00FB0F60 /* DeviceReaderUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FFBE0D932E00A78800FB0F60 /* Resources */ = {
+		FFBE0DB52E01B16F00FB0F60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFBE0E4C2E01FE2B00FB0F60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFBE0E592E01FE2C00FB0F60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFBE0E632E01FE2C00FB0F60 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -190,14 +322,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FF626F492E005C13007CA775 /* Sources */ = {
+		FFBE0DB32E01B16F00FB0F60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FFBE0D912E00A78800FB0F60 /* Sources */ = {
+		FFBE0E4A2E01FE2B00FB0F60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFBE0E572E01FE2C00FB0F60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FFBE0E612E01FE2C00FB0F60 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -205,6 +351,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FFBE0E5D2E01FE2C00FB0F60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFBE0E4D2E01FE2B00FB0F60 /* DeviceReader */;
+			targetProxy = FFBE0E5C2E01FE2C00FB0F60 /* PBXContainerItemProxy */;
+		};
+		FFBE0E672E01FE2C00FB0F60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FFBE0E4D2E01FE2B00FB0F60 /* DeviceReader */;
+			targetProxy = FFBE0E662E01FE2C00FB0F60 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FF626F522E005C13007CA775 /* Debug */ = {
@@ -325,25 +484,7 @@
 			};
 			name = Release;
 		};
-		FF626F552E005C13007CA775 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		FF626F562E005C13007CA775 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		FFBE0DA12E00A78800FB0F60 /* Debug */ = {
+		FFBE0DC32E01B16F00FB0F60 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = UsbXPCService/UsbXPCService.entitlements;
@@ -351,12 +492,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UsbXPCService/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = UsbXPCService;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = test.UsbXPCService;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.cesar.UsbXPCService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SKIP_INSTALL = YES;
@@ -365,24 +507,140 @@
 			};
 			name = Debug;
 		};
-		FFBE0DA22E00A78800FB0F60 /* Release */ = {
+		FFBE0DC42E01B16F00FB0F60 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = UsbXPCService/UsbXPCService.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UsbXPCService/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = UsbXPCService;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = test.UsbXPCService;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.cesar.UsbXPCService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FFBE0E6E2E01FE2C00FB0F60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DeviceReader/DeviceReader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.cesar.DeviceReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FFBE0E6F2E01FE2C00FB0F60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DeviceReader/DeviceReader.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.cesar.DeviceReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FFBE0E712E01FE2C00FB0F60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.cesar.DeviceReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeviceReader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DeviceReader";
+			};
+			name = Debug;
+		};
+		FFBE0E722E01FE2C00FB0F60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.cesar.DeviceReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeviceReader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DeviceReader";
+			};
+			name = Release;
+		};
+		FFBE0E742E01FE2C00FB0F60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.cesar.DeviceReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DeviceReader;
+			};
+			name = Debug;
+		};
+		FFBE0E752E01FE2C00FB0F60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.org.cesar.DeviceReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = DeviceReader;
 			};
 			name = Release;
 		};
@@ -398,20 +656,38 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF626F542E005C13007CA775 /* Build configuration list for PBXNativeTarget "devices-file-reader" */ = {
+		FFBE0DC22E01B16F00FB0F60 /* Build configuration list for PBXNativeTarget "UsbXPCService" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF626F552E005C13007CA775 /* Debug */,
-				FF626F562E005C13007CA775 /* Release */,
+				FFBE0DC32E01B16F00FB0F60 /* Debug */,
+				FFBE0DC42E01B16F00FB0F60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FFBE0DA02E00A78800FB0F60 /* Build configuration list for PBXNativeTarget "UsbXPCService" */ = {
+		FFBE0E6D2E01FE2C00FB0F60 /* Build configuration list for PBXNativeTarget "DeviceReader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FFBE0DA12E00A78800FB0F60 /* Debug */,
-				FFBE0DA22E00A78800FB0F60 /* Release */,
+				FFBE0E6E2E01FE2C00FB0F60 /* Debug */,
+				FFBE0E6F2E01FE2C00FB0F60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFBE0E702E01FE2C00FB0F60 /* Build configuration list for PBXNativeTarget "DeviceReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFBE0E712E01FE2C00FB0F60 /* Debug */,
+				FFBE0E722E01FE2C00FB0F60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFBE0E732E01FE2C00FB0F60 /* Build configuration list for PBXNativeTarget "DeviceReaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFBE0E742E01FE2C00FB0F60 /* Debug */,
+				FFBE0E752E01FE2C00FB0F60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
