@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FFBE0E782E01FE6900FB0F60 /* UsbXPCService.xpc in Copy Files (1 item) */ = {isa = PBXBuildFile; fileRef = FFBE0DB72E01B16F00FB0F60 /* UsbXPCService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FFBE0F062E0359E500FB0F60 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FFBE0F052E0359DC00FB0F60 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		FFBE0DB72E01B16F00FB0F60 /* UsbXPCService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = UsbXPCService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFBE0E4E2E01FE2B00FB0F60 /* DeviceReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFBE0F052E0359DC00FB0F60 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -35,17 +37,27 @@
 			membershipExceptions = (
 				main.swift,
 				UsbXPCDelegate.swift,
+				UsbXPCFactory.swift,
 				UsbXPCService.swift,
 			);
 			target = FFBE0DB62E01B16F00FB0F60 /* UsbXPCService */;
 		};
-		FFBE0EEF2E03377400FB0F60 /* Exceptions for "Shared" folder in "UsbXPCService" target */ = {
+		FFBE0EEF2E03377400FB0F60 /* Exceptions for "Core" folder in "UsbXPCService" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				UsbProtocol.swift,
-				UsbXPCProtocol.swift,
+				Infrastructure/adb,
+				Infrastructure/UsbProcessRunner.swift,
+				Protocols/UsbProtocol.swift,
+				Protocols/UsbXPCProtocol.swift,
 			);
 			target = FFBE0DB62E01B16F00FB0F60 /* UsbXPCService */;
+		};
+		FFBE0EF82E033A2600FB0F60 /* Exceptions for "Core" folder in "DeviceReader" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Infrastructure/UsbProcessRunner.swift,
+			);
+			target = FFBE0E4D2E01FE2B00FB0F60 /* DeviceReader */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -63,12 +75,13 @@
 			path = DeviceReader;
 			sourceTree = "<group>";
 		};
-		FFBE0EEE2E03374C00FB0F60 /* Shared */ = {
+		FFBE0EEE2E03374C00FB0F60 /* Core */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				FFBE0EEF2E03377400FB0F60 /* Exceptions for "Shared" folder in "UsbXPCService" target */,
+				FFBE0EEF2E03377400FB0F60 /* Exceptions for "Core" folder in "UsbXPCService" target */,
+				FFBE0EF82E033A2600FB0F60 /* Exceptions for "Core" folder in "DeviceReader" target */,
 			);
-			path = Shared;
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -94,10 +107,11 @@
 		FF626F442E005C13007CA775 = {
 			isa = PBXGroup;
 			children = (
-				FFBE0EEE2E03374C00FB0F60 /* Shared */,
+				FFBE0EEE2E03374C00FB0F60 /* Core */,
 				FFBE0D962E00A78800FB0F60 /* UsbXPCService */,
 				FFBE0E4F2E01FE2B00FB0F60 /* DeviceReader */,
 				FF626F4E2E005C13007CA775 /* Products */,
+				FFBE0F052E0359DC00FB0F60 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,7 +161,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				FFBE0E4F2E01FE2B00FB0F60 /* DeviceReader */,
-				FFBE0EEE2E03374C00FB0F60 /* Shared */,
+				FFBE0EEE2E03374C00FB0F60 /* Core */,
 			);
 			name = DeviceReader;
 			packageProductDependencies = (
@@ -206,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBE0F062E0359E500FB0F60 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +370,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UsbXPCService/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = UsbXPCService;
@@ -378,7 +393,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = UsbXPCService/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = UsbXPCService;

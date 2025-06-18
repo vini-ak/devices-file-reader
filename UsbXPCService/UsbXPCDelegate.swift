@@ -11,7 +11,7 @@ class UsbXPCDelegate: NSObject, NSXPCListenerDelegate {
     
     func listener(_ lisneter: NSXPCListener, shouldAcceptNewConnection connection: NSXPCConnection) -> Bool {        
         connection.exportedInterface = NSXPCInterface(with: UsbXPCProtocol.self)
-        connection.exportedObject = UsbXPCService()
+        connection.exportedObject = UsbXPCFactory.create()
         
         connection.remoteObjectInterface = NSXPCInterface(with: UsbProtocol.self)
         

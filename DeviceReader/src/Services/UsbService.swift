@@ -49,21 +49,20 @@ extension UsbService: UsbProtocol {
             throw NSError(domain: "usb-error", code: 1, userInfo: nil)
         }
         
-        let xpc = self.conn.remoteObjectProxyWithErrorHandler {
-            error in NSLog("Error: \(error)")
-        } as! UsbXPCProtocol
-        
         return try await withCheckedThrowingContinuation { continuation in
-            
-        guard let xpc = self.conn?.remoteObjectProxyWithErrorHandler({ error in
-                continuation.resume(throwing: error)
-            }) as? UsbXPCProtocol else {
-                continuation.resume(throwing: NSError(domain: "usb-error", code: 1))
-                return
-            }
+            guard let xpc = self.conn?.remoteObjectProxyWithErrorHandler({
+                error in
+                    continuation.resume(throwing: error)
+                }) as? UsbXPCProtocol else {
+                    continuation.resume(throwing: NSError(domain: "usb-error", code: 1))
+                    return
+                }
 
-            xpc.readUsbDevices { devices in
-                continuation.resume(returning: devices)
+//                xpc.readUsbDevices { devices in
+//                    continuation.resume(returning: devices)
+//                }
+            xpc.readUsbDevice("Teste") {
+                devices in print(devices)
             }
         }
     }
